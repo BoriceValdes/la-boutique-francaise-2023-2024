@@ -54,11 +54,11 @@ class ForgotPasswordController extends AbstractController
 
                 $this->em->flush();
 
-                $mail = new Mail();
-                $vars = [
-                    'link' => $this->generateUrl('app_password_update', ['token' => $token], UrlGeneratorInterface::ABSOLUTE_URL),
-                ];
-                $mail->send($user->getEmail(), $user->getFirstname().' '.$user->getLastname(), "Modification de votre mot de passe", "forgotpassword.html", $vars);
+                // $mail = new Mail();
+                // $vars = [
+                //     'link' => $this->generateUrl('app_password_update', ['token' => $token], UrlGeneratorInterface::ABSOLUTE_URL),
+                // ];
+                // $mail->send($user->getEmail(), $user->getFirstname().' '.$user->getLastname(), "Modification de votre mot de passe", "forgotpassword.html", $vars);
             }
         }
 
